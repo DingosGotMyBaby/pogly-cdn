@@ -1,10 +1,10 @@
 import { OpenAPIRoute } from "chanfana";
 import { z } from "zod";
 import { checkBanStatus } from "../lib/db";
-import { generatePresignedUrl } from "../lib/r2";
+import { generatePresignedUrl } from "../lib/s3";
 
 /**
- * Upload endpoint that generates pre-signed URLs for secure file uploads to Cloudflare R2.
+ * Upload endpoint that generates pre-signed URLs for secure file uploads to Backblaze B2.
  * 
  * This endpoint performs the following operations:
  * 1. Validates upload request metadata (file name, type, size, author, module)

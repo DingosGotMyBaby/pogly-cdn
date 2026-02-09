@@ -9,11 +9,11 @@ export async function generatePresignedUrl(
     metadata: Record<string, string>
 ): Promise<string> {
     const S3 = new S3Client({
-        region: "auto",
-        endpoint: `https://${env.R2_ACCOUNT_ID}.r2.cloudflarestorage.com`,
+        region: env.S3_REGION,
+        endpoint: env.S3_ENDPOINT,
         credentials: {
-            accessKeyId: env.R2_ACCESS_KEY_ID,
-            secretAccessKey: env.R2_SECRET_ACCESS_KEY,
+            accessKeyId: env.S3_ACCESS_KEY_ID,
+            secretAccessKey: env.S3_SECRET_ACCESS_KEY,
         },
     });
 

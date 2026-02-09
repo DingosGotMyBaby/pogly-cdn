@@ -12,9 +12,9 @@ vi.mock("../src/lib/db", () => {
 import { checkBanStatus } from "../src/lib/db";
 
 // Mock the generatePresignedUrl function
-vi.mock("../src/lib/r2", () => {
+vi.mock("../src/lib/s3", () => {
     return {
-        generatePresignedUrl: vi.fn().mockResolvedValue("https://fake-r2-url.com/some-key"),
+        generatePresignedUrl: vi.fn().mockResolvedValue("https://fake-s3-url.com/some-key"),
     };
 });
 
